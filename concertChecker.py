@@ -1,7 +1,8 @@
+import os
 import requests
 
-seatgeek_secret = 'a87441916c362cc5e9589c18d691d8407e67aa24270a6143760aa90fc3eb77d4'
-seatgeek_clientID = 'MzA2NzI5NzN8MTY2OTY5NDkxNC43NTMzOTAz'
+seatgeek_secret = os.environ["SEATGEEK_SECRET"]
+seatgeek_clientID = os.environ["SEATGEEK_CLIENT_ID"]
 
 URL_SEATGEEK = 'https://api.seatgeek.com/2/events'
 
