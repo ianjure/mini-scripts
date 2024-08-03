@@ -1,4 +1,3 @@
-import speech_recognition as sr
 import pyttsx3
 import pywhatkit
 import datetime
@@ -7,7 +6,6 @@ import pyjokes
 import subprocess
 import webbrowser
 import pyautogui
-import time as t
 import struct
 import pvporcupine
 import pyaudio
@@ -15,10 +13,12 @@ import winsound
 import os
 import sys
 import openai
+import time as t
+import speech_recognition as sr
 from AppOpener import run
 from subprocess import Popen
 
-API = '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'
+API = [OPEN AI API KEY]
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
@@ -67,9 +67,9 @@ def jarvis_main():
             break
         if 'dota' in command:
             talk('Opening Dota')
-            Popen(['D://Steam//steam.exe'])
+            Popen([STEAM PATH])
             t.sleep(6)
-            Popen(['D://Steam//steamapps//common//dota 2 beta//game//bin//win64//dota2.exe'])
+            Popen([DOTA PATH])
             break
         if 'messenger' in command:
             talk('Accessing Messenger')
@@ -77,7 +77,7 @@ def jarvis_main():
             break
         if 'code' in command:
             talk('Opening Visual Studio Code')
-            Popen(['D://Microsoft VS Code//Code.exe'])
+            Popen([VS CODE PATH])
             break
         if 'notebook' in command:
             talk('Accessing Jupyter Notebook')
